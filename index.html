@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fusion - Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles"></div>
+    
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-gamepad"></i>
+            <span>Fun Fusion</span>
+        </div>
+        <nav class="nav">
+            <a href="#games" class="nav-link active">Games</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">🎮 Welcome to</span>
+                <span class="title-line highlight">Fun Fusion!</span>
+            </h1>
+            <p class="hero-subtitle">Discover amazing games and have endless fun!</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Games</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Fun</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Free</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games-section">
+        <div class="section-header">
+            <h2>Choose Your Adventure</h2>
+            <p>Pick a game and start your journey!</p>
+        </div>
+        
+        <div class="game-list">
+            <!-- Tic-Tac-Toe -->
+            <div class="game-card tic-tac-toe-card">
+                <div class="card-header">
+                    <div class="game-icon">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="difficulty-badge">Easy</div>
+                </div>
+                <img src="tic-tac-toe/tics.png" alt="Tic Tac Toe" class="game-image">
+                <div class="card-content">
+                    <h3>Tic Tac Toe</h3>
+                    <p>Classic strategy game! Get three in a row to win against your opponent.</p>
+                    <div class="game-features">
+                        <span class="feature"><i class="fas fa-users"></i> 2 Players</span>
+                        <span class="feature"><i class="fas fa-brain"></i> Strategy</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="tic-tac-toe/tic.html" class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </a>
+                    <button class="info-button" onclick="showGameInfo('tic-tac-toe')">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Drum Kit -->
+            <div class="game-card drum-kit-card">
+                <div class="card-header">
+                    <div class="game-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="difficulty-badge">Medium</div>
+                </div>
+                <img src="drum-kit/images/drumkit.jpeg" alt="Drum Kit" class="game-image">
+                <div class="card-content">
+                    <h3>Drum Kit</h3>
+                    <p>Make some noise! Click the drums or use keyboard keys to create beats.</p>
+                    <div class="game-features">
+                        <span class="feature"><i class="fas fa-music"></i> Music</span>
+                        <span class="feature"><i class="fas fa-keyboard"></i> Interactive</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="drum-kit/index.html" class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </a>
+                    <button class="info-button" onclick="showGameInfo('drum-kit')">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dicee Challenge -->
+            <div class="game-card dicee-card">
+                <div class="card-header">
+                    <div class="game-icon">
+                        <i class="fas fa-dice"></i>
+                    </div>
+                    <div class="difficulty-badge">Easy</div>
+                </div>
+                <img src="Dicee/dice8.png" alt="Dicee Challenge" class="game-image">
+                <div class="card-content">
+                    <h3>Dicee Challenge</h3>
+                    <p>Roll the dice and see who gets lucky! Refresh to play again.</p>
+                    <div class="game-features">
+                        <span class="feature"><i class="fas fa-users"></i> 2 Players</span>
+                        <span class="feature"><i class="fas fa-random"></i> Luck</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="Dicee/index.html" class="play-button">
+                        <i class="fas fa-play"></i>
+                        Play Now
+                    </a>
+                    <button class="info-button" onclick="showGameInfo('dicee')">
+                        <i class="fas fa-info-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Fun Fusion</h2>
+            <p>Your ultimate destination for fun and engaging web games. Built with modern web technologies and designed for the best user experience.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Fun Fusion</h3>
+                <p>Making gaming accessible and fun for everyone!</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#games">Games</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Fun Fusion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Game Info Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
