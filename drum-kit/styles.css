@@ -1,0 +1,418 @@
+/* Modern Drum Kit Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #ff6b6b;
+    --success-color: #4ecdc4;
+    --warning-color: #ffd93d;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --border-radius: 15px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Back to Home Button */
+.back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Game Container */
+.game-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+/* Game Header */
+.game-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.game-header h1 i {
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Instructions */
+.instructions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+.instruction-item i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+/* Drum Set */
+.drum-set {
+    margin-bottom: 40px;
+}
+
+.drum-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.drum {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.drum:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+}
+
+.drum:active {
+    transform: scale(0.95);
+}
+
+.drum.pressed {
+    background: rgba(255, 107, 107, 0.3);
+    border-color: var(--accent-color);
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.drum-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.drum-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* Drum Background Images */
+.drum.w {
+    background-image: url('images/tom1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.drum.a {
+    background-image: url('images/tom2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.drum.s {
+    background-image: url('images/tom3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.drum.d {
+    background-image: url('images/tom4.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.drum.j {
+    background-image: url('images/crash.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.drum.k {
+    background-image: url('images/kick.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.drum.l {
+    background-image: url('images/snare.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Game Controls */
+.game-controls {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn.active {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* Beat Counter */
+.beat-counter {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
+}
+
+.counter-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter-label {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.counter-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 15px;
+    min-width: 60px;
+}
+
+/* Drum Info */
+.drum-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.drum-info h3 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-size: 1.3rem;
+}
+
+.drum-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.drum-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.type-name {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.type-keys {
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Drum Press Animation */
+@keyframes drumPress {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.drum.pressed {
+    animation: drumPress 0.1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 20px;
+    }
+    
+    .game-header h1 {
+        font-size: 2rem;
+    }
+    
+    .instructions {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .drum-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .drum {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .drum-icon {
+        font-size: 1.5rem;
+    }
+    
+    .drum-label {
+        font-size: 1rem;
+    }
+    
+    .drum-types {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .control-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .game-container {
+        padding: 15px;
+    }
+    
+    .drum {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .drum-icon {
+        font-size: 1.2rem;
+    }
+    
+    .drum-label {
+        font-size: 0.9rem;
+    }
+    
+    .counter-value {
+        font-size: 1.5rem;
+    }
+}

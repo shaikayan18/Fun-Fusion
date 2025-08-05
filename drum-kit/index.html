@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit - Fun Fusion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Back to Home Button -->
+    <div class="back-link">
+        <a href="../index.html" class="home-btn">
+            <i class="fas fa-home"></i> Back to Home
+        </a>
+    </div>
+
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <h1><i class="fas fa-drum"></i> Drum Kit</h1>
+            <p class="subtitle">Create amazing beats with your keyboard or mouse!</p>
+        </header>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <div class="instruction-item">
+                <i class="fas fa-keyboard"></i>
+                <span>Use keys: W, A, S, D, J, K, L</span>
+            </div>
+            <div class="instruction-item">
+                <i class="fas fa-mouse"></i>
+                <span>Or click the drums with your mouse</span>
+            </div>
+        </div>
+
+        <!-- Drum Set -->
+        <div class="drum-set">
+            <div class="drum-row">
+                <button class="drum w" data-key="w">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">W</div>
+                </button>
+                <button class="drum a" data-key="a">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">A</div>
+                </button>
+                <button class="drum s" data-key="s">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">S</div>
+                </button>
+                <button class="drum d" data-key="d">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">D</div>
+                </button>
+            </div>
+            
+            <div class="drum-row">
+                <button class="drum j" data-key="j">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">J</div>
+                </button>
+                <button class="drum k" data-key="k">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">K</div>
+                </button>
+                <button class="drum l" data-key="l">
+                    <div class="drum-icon">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="drum-label">L</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button class="control-btn" id="muteBtn">
+                <i class="fas fa-volume-mute"></i> Mute All
+            </button>
+            <button class="control-btn" id="demoBtn">
+                <i class="fas fa-play"></i> Demo Beat
+            </button>
+        </div>
+
+        <!-- Beat Counter -->
+        <div class="beat-counter">
+            <div class="counter-display">
+                <span class="counter-label">Beats Played:</span>
+                <span class="counter-value" id="beatCounter">0</span>
+            </div>
+        </div>
+
+        <!-- Drum Types Info -->
+        <div class="drum-info">
+            <h3>Drum Types</h3>
+            <div class="drum-types">
+                <div class="drum-type">
+                    <span class="type-name">Tom 1-4</span>
+                    <span class="type-keys">W, A, S, D</span>
+                </div>
+                <div class="drum-type">
+                    <span class="type-name">Crash</span>
+                    <span class="type-keys">J</span>
+                </div>
+                <div class="drum-type">
+                    <span class="type-name">Kick Bass</span>
+                    <span class="type-keys">K</span>
+                </div>
+                <div class="drum-type">
+                    <span class="type-name">Snare</span>
+                    <span class="type-keys">L</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
